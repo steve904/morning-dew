@@ -1,0 +1,105 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+nodeVersion: '12'
+publishDir: public
+pagesDir: content
+models:
+  page:
+    type: page
+    label: Page
+    folder: pages
+    match: '**/*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: slug
+        label: Slug
+      - type: image
+        name: cover
+        label: Cover
+      - type: boolean
+        name: disqus
+        label: Disqus
+  post:
+    type: page
+    label: Post
+    folder: posts
+    match: '**/*'
+    exclude:
+      - 2018-01-03-Big-Sample-Post/index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: slug
+        label: Slug
+      - type: date
+        name: date
+        label: Date
+      - type: boolean
+        name: published
+        label: Published
+      - type: boolean
+        name: unlisted
+        label: Unlisted
+      - type: boolean
+        name: generate-card
+        label: Generate Card
+      - type: string
+        name: language
+        label: Language
+      - type: image
+        name: cover
+        label: Cover
+      - type: image
+        name: imageShare
+        label: Image Share
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: list
+        name: translations
+        label: Translations
+        items:
+          type: object
+          fields:
+            - type: string
+              name: link
+              label: Link
+            - type: string
+              name: language
+              label: Language
+            - type: string
+              name: hreflang
+              label: Hreflang
+  2018_01_03_big_sample_post:
+    type: page
+    label: 2018 01 03 Big Sample Post
+    folder: posts/2018-01-03-Big-Sample-Post
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: slug
+        label: Slug
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: language
+        label: Language
+      - type: boolean
+        name: generate-card
+        label: Generate Card
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
